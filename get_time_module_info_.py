@@ -72,7 +72,7 @@ A file containing info about the Time Module , Time MOdule Methods'''
     import time
     file = input("Enter name for the new text file to be created : ")
     e = time.__doc__
-    h = "\n. ".join(dir(a))
+    h = "\n. ".join(dir(time))
     i = "\n" , ":"*50 , "\n"
     with open(f"{file}.txt" , "w") as f :
         f.writelines(i)
@@ -96,7 +96,7 @@ To return the method with least Execution time'''
     print("Least execution time of :")
     print("\t","without zip function" if x < y else "with zip function")
 
-if __name__ == "__main__" :
+def run() :
     while True :
         print(l)
         print("Get Module Info")
@@ -130,3 +130,5 @@ if __name__ == "__main__" :
             print(" Wrong Input !")
             print(l)
             break
+            
+run()
