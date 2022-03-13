@@ -84,15 +84,15 @@ A file containing info about the Time Module , Time MOdule Methods'''
         f.write(h)
     print("Created File : %s.txt Successfully!"  %(file))
 
-#? OPTIONAL : To test the execution duration of the Two methods
-def exectionTime() :
+#? OPTIONAL : To test the execution time of the Two methods
+def executionTime() :
     ''' To Test the execution time and the time difference between the 2 methods : getMethodInfo & getMethodInfo_
 To return the method with least Execution time'''
     from timeit import timeit as a
-    x = a(getMethodInfo , number = 1)
-    y = a(getMethodInfo_ , number = 1)
-    print("without zip function" , x)
-    print("with zip function" , y)
+    x = a(getMethodInfo , number = 10)
+    y = a(getMethodInfo_ , number = 10)
+    print("without zip function : " , x)
+    print("with zip function : " , y)
     print("Least execution time of :")
     print("\t","without zip function" if x < y else "with zip function")
 
@@ -123,6 +123,7 @@ if __name__ == "__main__" :
 
         elif a == 7 :
             print("Thank You!")
+            print(l)
             break
 
         else :
