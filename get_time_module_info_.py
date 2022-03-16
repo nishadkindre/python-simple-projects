@@ -30,7 +30,7 @@ def getMethodList():
     print(l)
     for i,j in enumerate(methods_,1) : print(i,j)
 
-def getMethodInfo(c=21) : #* default argument given for the sake of executionTime()
+def getMethodInfo(c=21) : #* default argument given for the sake of executionTime() function
     '''Returns the information about the time module method ,
 using the input number given by the user as an argument while calling the function.'''
     print(methods_[c-1] , "method")
@@ -101,34 +101,46 @@ def run() :
         print(l)
         print("Get Module Info")
         print(l)
-        a = int(input(" Enter 1 : Time Module info \n Enter 2 : Method List \n Enter 3 : Method Info \n Enter 4 : Export All Info To a Text File \n Enter 5 : Execution Time \n Enter 6 : Get All Methods Info \n Enter 7 : Exit \n "))
+        a = input(   " Enter 1 : Time Module info \
+                    \n Enter 2 : Method List \
+                    \n Enter 3 : Method Info \
+                    \n Enter 4 : Export All Info To a Text File \
+                    \n Enter 5 : Execution Time \
+                    \n Enter 6 : Get All Methods Info \
+                    \n Enter 7 : Exit \n ")
         print(l)
-        if a == 1 : 
+
+        if a == "1" : 
             getModuleInfo()
 
-        elif a == 2 : 
+        elif a == "2" : 
             getMethodList()
 
-        elif a == 3 :
+        elif a == "3" :
             returnMethodInfo()
 
-        elif a == 4 :
+        elif a == "4" :
             exportInfo()
 
-        elif a == 5 :
-            exectionTime()
+        elif a == "5" :
+            executionTime()
 
-        elif a == 6 : 
+        elif a == "6" : 
             returnAllMethodsInfo()
 
-        elif a == 7 :
+        elif a == "7" :
             print("Thank You!")
             print(l)
             break
+        
+        #* Print Statement to be returned only if there is any charachter other than a digit in the string
+        elif all(x.isdigit() for x in a) == False :
+            print("\n***Please Enter In Number Format***\n")
 
         else :
             print(" Wrong Input !")
             print(l)
             break
             
-run()
+if __name__ == '__main__' :
+    run()
