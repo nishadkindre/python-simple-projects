@@ -15,8 +15,10 @@ methods_info = (y.__doc__, time.__doc__.__doc__, __loader__.__doc__, __name__.__
 l = "\n" + ":"*30 + "\n"
 
 def getModuleInfo() :
-    '''Returns the information about the time module.
-& the methods under time module'''
+    '''
+    Returns the information about the time module.
+    & the methods under time module
+    '''
     print(l)
     print("Time Module Info")
     print(l)
@@ -31,16 +33,20 @@ def getMethodList():
     for i,j in enumerate(methods_,1) : print(i,j)
 
 def getMethodInfo(c=21) : #* default argument given for the sake of executionTime() function
-    '''Returns the information about the time module method ,
-using the input number given by the user as an argument while calling the function.'''
+    '''
+    Returns the information about the time module method ,
+    using the input number given by the user as an argument while calling the function.
+    '''
     print(methods_[c-1] , "method")
     print(methods_info[c-1])
     print("-"*50)
 
 #? OPTIONAL : Using zip() function 
 def getMethodInfo_(c=21) :
-    '''Same as the getMethodInfo() function ,  difference is we have used zip function to construct a list from zip object of the list : methods_ and methods_info.
-In getMethodInfo() function , we directly use the methods of the individual lists'''
+    '''
+    Same as the getMethodInfo() function ,  difference is we have used zip function to construct a list from zip object of the list : methods_ and methods_info.
+    In getMethodInfo() function , we directly use the methods of the individual lists
+    '''
     a = zip(methods_ , methods_info)
     b = tuple(a)
     print(b[c-1][0] , "Method")
@@ -70,8 +76,10 @@ def returnAllMethodsInfo():
     print(g)
             
 def exportInfo() :
-    '''To  create a file with filename entered by the user 
-A file containing info about the Time Module , Time MOdule Methods'''
+    '''
+    To  create a file with filename entered by the user 
+    A file containing info about the Time Module , Time MOdule Methods
+    '''
     import time
     file = input("Enter name for the new text file to be created : ")
     e = time.__doc__
@@ -89,8 +97,10 @@ A file containing info about the Time Module , Time MOdule Methods'''
 
 #? OPTIONAL : To test the execution time of the Two methods
 def executionTime() :
-    ''' To Test the execution time and the time difference between the 2 methods : getMethodInfo & getMethodInfo_
-To return the method with least Execution time'''
+    '''
+    To Test the execution time and the time difference between the 2 methods : getMethodInfo & getMethodInfo_
+    To return the method with least Execution time
+    '''
     from timeit import timeit as a
     x = a(getMethodInfo , number = 10)
     y = a(getMethodInfo_ , number = 10)
