@@ -52,15 +52,18 @@ In getMethodInfo() function , we directly use the methods of the individual list
 def returnMethodInfo() :
     '''To Return the specific info of a module entered by user  , thus calling getMethodInfo_() function'''
     print(l)
-    c = int(input("Enter number : "))
-    if c > len(methods_) : 
-        raise IndexError("Wrong Input!!!\n\
-                        ***Please Enter Number within range***")
-    else :
+    try :
+        c = int(input("Enter Number : "))
         print(l)
         getMethodInfo_(c)
         # getMethodInfo(c)
         # exectionTime()
+        
+    except ValueError :
+        print("\t***Please Enter In Number Format Only***")
+        
+    except IndexError :
+        print("\t***Please Enter Number within range***")
 
 def returnAllMethodsInfo():
     g = list(map(lambda a : getMethodInfo(a) , range(1,31)))
