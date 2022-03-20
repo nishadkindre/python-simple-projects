@@ -11,6 +11,7 @@ methods_info = (y.__doc__, time.__doc__.__doc__, __loader__.__doc__, __name__.__
                 asctime.__doc__, ctime.__doc__, daylight.__doc__, get_clock_info.__doc__, gmtime.__doc__, localtime.__doc__, mktime.__doc__, monotonic.__doc__, 
                 monotonic_ns.__doc__, perf_counter.__doc__, perf_counter_ns.__doc__, process_time.__doc__, process_time_ns.__doc__, sleep.__doc__, strftime.__doc__, 
                 strptime.__doc__, struct_time.__doc__, thread_time.__doc__, thread_time_ns.__doc__, time.__doc__, time_ns.__doc__, timezone.__doc__, tzname.__doc__)
+# obtained by --> print(".__doc__,".join(methods_))
 
 l = "\n" + ":"*30 + "\n"
 
@@ -151,7 +152,7 @@ def run() :
             print("\n***Please Enter In Number Format***\n")
 
         else :
-            print(" Wrong Input !")
+            print("\n***Please Enter Number within range***\n")    
             print(l)
             break
             
